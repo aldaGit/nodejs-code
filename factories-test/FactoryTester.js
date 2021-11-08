@@ -1,7 +1,7 @@
-const Factory = require("./factories/EmployeeFactory");
-const AsyncFactory = require("./factories/EmployeeFactoryAsync");
-const HandlerFactory = require("./factories/EmployeeFactoryHandler");
-const PromiseFactory = require("./factories/EmployeeFactoryPromise");
+const Factory = require("../factories/EmployeeFactory");
+const AsyncFactory = require("../factories/EmployeeFactoryAsync");
+const HandlerFactory = require("../factories/EmployeeFactoryHandler");
+const PromiseFactory = require("../factories/EmployeeFactoryPromise");
 const express = require('express');
 const app = express();
 
