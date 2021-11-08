@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/OrangeExpress.iml" filepath="$PROJECT_DIR$/OrangeExpress.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/nodejs-code.iml" filepath="$PROJECT_DIR$/.idea/nodejs-code.iml" />
     </modules>
   </component>
 </project>

@@ -37,7 +37,6 @@ request(options, function(err, res, body) {
             }
         };
 
-
     request.get(options2 , function(err, res, body) {
             let json2 = JSON.parse(body);
             console.log(json2);

@@ -10,7 +10,7 @@ const app = express();
 app.get( '/employees/:id' , (req , res) => {
     let id = req.params.id;
     let employee = Factory.createEmployee({ id : id } );
-    const des = employee.toString();
+    const des = employee;
     res.send( des );
 } );
 
@@ -39,7 +39,7 @@ app.get( '/employeeshandler/:id' , (req , res) => {
 app.get( '/employeespromise/:id' , (req , res) => {
     let id = req.params.id;
     PromiseFactory.createEmployee({ id : id } )
-        .then( employee => { res.send( employee.toString() ) } )
+        .then( employee => { res.send( employee ) } )
         .catch( error => {res.send( "some went wrong from the server" ); console.log("Some went wrong: " + error) } );
 
 } );
@@ -51,16 +51,16 @@ app.get( '/employeespromise/:id' , (req , res) => {
 app.get( '/employeesasync/:id' ,  (req , res) => {
     let id = req.params.id;
     AsyncFactory.createEmployee({ id : id } )
-        .then( employee => { res.send( employee.toString() ) } )
+        .then( employee => { res.send( employee ) } )
         .catch( error => {res.send( "some went wrong from the server" ); console.log("Some went wrong: " + error) } );
 } );
 
 // Usage of the asynchronous function with await directly without coding overhead. Code appears more synchronous.
 // This variant is only possible, when the handler function (argument in get) is declared as async!
-app.get( '/employeesasync2/:id' ,  async (req, res) => {
+app.get( '/employeesasyncawait/:id' ,  async (req, res) => {
     let id = req.params.id;
     let employee = await AsyncFactory.createEmployee({ id : id } ).catch(() => console.log("wrong"));
-    const des = employee.toString();
+    const des = employee;
     res.send(des);
 } );
 
